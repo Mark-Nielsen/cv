@@ -1,164 +1,106 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dit Navn - CV & Erfaring</title>
-    <style>
-        :root {
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --primary: #0284c7;
-            --border: #e2e8f0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg);
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 750px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-        }
-
-        header {
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 24px;
-            margin-bottom: 32px;
-        }
-
-        h1 { margin: 0 0 8px 0; font-size: 2rem; color: #0f172a; }
-        .tagline { font-size: 1.15rem; color: var(--text-muted); margin: 0 0 16px 0; }
-
-        .contact-links a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-bottom: 8px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .contact-links a:hover { text-decoration: underline; }
-
-        h2 {
-            font-size: 1.3rem;
-            color: #0f172a;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 6px;
-            margin-top: 32px;
-            margin-bottom: 16px;
-        }
-
-        .item { margin-bottom: 20px; }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 1.05rem;
-        }
-        .date { color: var(--text-muted); font-size: 0.9rem; font-weight: normal; }
-        .role { color: var(--primary); font-weight: 500; margin-bottom: 4px; }
-        .item p { margin: 4px 0 0 0; color: #334155; }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .skill-tag {
-            background: #f1f5f9;
-            color: #334155;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .btn-download {
-            display: inline-block;
-            background: var(--primary);
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark Kruse Schirmer Nielsen – Projekter</title>
+<meta name="description" content="Projekter og kompetencer – Softwareteknologi, Aarhus Universitet.">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --text: #1c2430;
+    --muted: #5b6575;
+    --line: #d9dde3;
+    --accent: #1f4e79;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --text: #e6e9ee;
+      --muted: #9aa4b2;
+      --line: #2b323d;
+      --accent: #7fb1e0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.01em; }
+  .intro { color: var(--muted); margin: 0 0 1.25rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; font-size: .95rem; margin: 0; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  section { margin-top: 3.5rem; }
+  h2 { font-size: 1.25rem; margin: 0 0 1.25rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+  .project { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+  .project:last-child { border-bottom: 0; }
+  .project h3 { font-size: 1.1rem; margin: 0 0 .35rem; }
+  .project p { margin: 0 0 .6rem; max-width: 38rem; }
+  .project .status { color: var(--muted); font-size: .9rem; }
+  .skills { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .5rem 2rem; }
+  .skills li { padding-left: 1rem; position: relative; }
+  .skills li::before { content: ""; position: absolute; left: 0; top: .7em; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+  footer { margin-top: 4rem; color: var(--muted); font-size: .9rem; }
+</style>
 </head>
 <body>
+<main>
+  <header>
+    <h1>Mark Kruse Schirmer Nielsen</h1>
+    <p class="intro">Softwareteknologi-studerende på Aarhus Universitet. Her er mine projekter og de kompetencer, jeg har med mig fra dem.</p>
+    <p class="contact">
+      <a href="mailto:mark.nielsen.dk1@gmail.com">mark.nielsen.dk1@gmail.com</a>
+      <span>28 89 13 09</span>
+      <span>Randers SØ</span>
+    </p>
+  </header>
 
-<div class="container">
-    <header>
-        <h1>Dit Navn</h1>
-        <p class="tagline">Titel / Professionel profil (f.eks. Projektleder | Marketing | Webudvikler)</p>
-        <div class="contact-links">
-            <a href="mailto:din-email@gmail.com">din-email@gmail.com</a>
-            <a href="https://linkedin.com/in/dinprofil" target="_blank">LinkedIn</a>
-            <a href="mit-cv.pdf" class="btn-download" target="_blank">Hent CV som PDF</a>
-        </div>
-    </header>
+  <section id="projekter" aria-labelledby="projekter-h">
+    <h2 id="projekter-h">Projekter</h2>
 
-    <section>
-        <h2>Om mig</h2>
-        <p>Kort og præcis introduktion til hvem du er, hvad du brænder for, og hvilken værdi du skaber i en virksomhed.</p>
-    </section>
+    <article class="project">
+      <h3>Intelligent strømovervågning til ustabil elforsyning</h3>
+      <p>Embedded system, der måler energiforbrug pr. rum og restkapacitet på nødstrømsanlægget. Ved lav kapacitet slukkes mindre kritiske zoner automatisk efter en fast prioritetsrækkefølge, så strømmen bevares til de vigtigste funktioner.</p>
+      <a href="https://github.com/mark-nielsen/REPO-NAVN">Se repository på GitHub</a>
+    </article>
 
-    <section>
-        <h2>Erhvervserfaring</h2>
-        <div class="item">
-            <div class="item-header">
-                <span>Virksomhed A</span>
-                <span class="date">2023 – Nu</span>
-            </div>
-            <div class="role">Stillingstitel</div>
-            <p>Kort beskrivelse af dine ansvarsområder og resultater.</p>
-        </div>
+      <article class="project">
+      <h3>Distribueret jordskælvsovervågning</h3>
+      <p>Distribueret system med sensor nodes og accelerometre, der kan opfange tegn på jordskælv. Indeholder behandling af accelerometerdata og trådløs kommunikation via MQTT.</p>
+      <p class="status">Under udvikling – 4. semester.</p>
+      <a href="https://github.com/mark-nielsen/REPO-NAVN">Se repository på GitHub</a>
+    </article>
 
-        <div class="item">
-            <div class="item-header">
-                <span>Virksomhed B</span>
-                <span class="date">2021 – 2023</span>
-            </div>
-            <div class="role">Tidligere stillingstitel</div>
-            <p>Hvad opnåede du her? Brug gerne konkrete resultater.</p>
-        </div>
-    </section>
+    <article class="project">
+      <h3>Full-stack webapplikation</h3>
+      <p>Komplet webapplikation udviklet fra bunden med front-end, C#/.NET back-end og tilhørende databaser.</p>
+      <p class="status">Under udvikling – 4. semester.</p>
+      <a href="https://github.com/mark-nielsen/REPO-NAVN">Se repository på GitHub</a>
+    </article>
+  </section>
 
-    <section>
-        <h2>Uddannelse</h2>
-        <div class="item">
-            <div class="item-header">
-                <span>Universitet / Skole</span>
-                <span class="date">2018 – 2021</span>
-            </div>
-            <div class="role">Uddannelsens navn</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Kompetencer</h2>
-        <div class="skills-grid">
-            <span class="skill-tag">Projektledelse</span>
-            <span class="skill-tag">Kommunikation</span>
-            <span class="skill-tag">Strategi</span>
-            <span class="skill-tag">Værktøj A</span>
-            <span class="skill-tag">Værktøj B</span>
-        </div>
-    </section>
-</div>
-
+  <section id="kompetencer" aria-labelledby="kompetencer-h">
+    <h2 id="kompetencer-h">Kompetencer</h2>
+    <ul class="skills">
+      <li>C++, C# og Python</li>
+      <li>Embedded systems og microcontrollere</li>
+      <li>IoT og MQTT</li>
+      <li>Signalbehandling af sensordata</li>
+      <li>REST API og .NET back-end</li>
+      <li>Front-end (JS/TS) og databaser (SQL/NoSQL)</li>
+      <li>Netværksprogrammering (TCP/IP, sockets)</li>
+      <li>Linux og multithreading</li>
+      <li>Unit testing og CI/CD</li>
+      <li>Scrum og kravspecifikation</li>
+    </ul>
+  </section>
+</main>
 </body>
 </html>
