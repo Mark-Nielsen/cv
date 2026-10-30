@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dit Navn - CV & Erfaring</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #0284c7;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 { margin: 0 0 8px 0; font-size: 2rem; color: #0f172a; }
+        .tagline { font-size: 1.15rem; color: var(--text-muted); margin: 0 0 16px 0; }
+
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-links a:hover { text-decoration: underline; }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        .item { margin-bottom: 20px; }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        .date { color: var(--text-muted); font-size: 0.9rem; font-weight: normal; }
+        .role { color: var(--primary); font-weight: 500; margin-bottom: 4px; }
+        .item p { margin: 4px 0 0 0; color: #334155; }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: var(--primary);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Dit Navn</h1>
+        <p class="tagline">Titel / Professionel profil (f.eks. Projektleder | Marketing | Webudvikler)</p>
+        <div class="contact-links">
+            <a href="mailto:din-email@gmail.com">din-email@gmail.com</a>
+            <a href="https://linkedin.com/in/dinprofil" target="_blank">LinkedIn</a>
+            <a href="mit-cv.pdf" class="btn-download" target="_blank">Hent CV som PDF</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Om mig</h2>
+        <p>Kort og præcis introduktion til hvem du er, hvad du brænder for, og hvilken værdi du skaber i en virksomhed.</p>
+    </section>
+
+    <section>
+        <h2>Erhvervserfaring</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Virksomhed A</span>
+                <span class="date">2023 – Nu</span>
+            </div>
+            <div class="role">Stillingstitel</div>
+            <p>Kort beskrivelse af dine ansvarsområder og resultater.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>Virksomhed B</span>
+                <span class="date">2021 – 2023</span>
+            </div>
+            <div class="role">Tidligere stillingstitel</div>
+            <p>Hvad opnåede du her? Brug gerne konkrete resultater.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Uddannelse</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Universitet / Skole</span>
+                <span class="date">2018 – 2021</span>
+            </div>
+            <div class="role">Uddannelsens navn</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Kompetencer</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Projektledelse</span>
+            <span class="skill-tag">Kommunikation</span>
+            <span class="skill-tag">Strategi</span>
+            <span class="skill-tag">Værktøj A</span>
+            <span class="skill-tag">Værktøj B</span>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
